@@ -6,7 +6,7 @@
   "module": "lib/index.esm.js",
   "types": "lib/index.d.ts",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@PedroDiniz"
+    "@PedroDiniz:registry": "https://npm.pkg.github.com/@PedroDiniz"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

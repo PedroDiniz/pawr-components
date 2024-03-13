@@ -1,6 +1,6 @@
 {
   "name": "pawr-components",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
@@ -30,6 +30,7 @@
     "@storybook/test": "^8.0.0",
     "@types/react": "^18.2.65",
     "postcss": "^8.4.35",
+    "prettier": "^3.2.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rollup": "^4.13.0",

@@ -1,10 +1,13 @@
 {
-  "name": "pawr-components",
+  "name": "@pedrodiniz/pawr-components",
   "version": "1.0.0",
   "description": "",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
   "types": "lib/index.d.ts",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@PedroDiniz"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "storybook dev -p 6006",
@@ -16,6 +19,9 @@
   "license": "ISC",
   "devDependencies": {
     "@chromatic-com/storybook": "^1.2.18",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-typescript": "^11.1.6",
     "@storybook/addon-essentials": "^8.0.0",
     "@storybook/addon-interactions": "^8.0.0",
     "@storybook/addon-links": "^8.0.0",
@@ -26,8 +32,13 @@
     "@storybook/react-webpack5": "^8.0.0",
     "@storybook/test": "^8.0.0",
     "@types/react": "^18.2.65",
+    "postcss": "^8.4.35",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "rollup": "^4.13.0",
+    "rollup-plugin-dts": "^6.1.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
     "storybook": "^8.0.0",
     "typescript": "^5.4.2"
   },
@@ -37,6 +48,5 @@
   },
   "files": [
     "/lib"
-  ],
-  "private": true
+  ]
 }

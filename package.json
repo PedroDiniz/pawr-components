@@ -5,6 +5,10 @@
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
   "types": "lib/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PedroDiniz/pawr-components"
+  },
   "publishConfig": {
     "@PedroDiniz:registry": "https://npm.pkg.github.com/@PedroDiniz"
   },

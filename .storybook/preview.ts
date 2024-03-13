@@ -1,4 +1,6 @@
-/** @type { import('@storybook/react').Preview } */
+import { StoryFn } from '@storybook/react';
+import withGlobalStyle from './globalStyle'; // Import your decorator
+
 const preview = {
 	parameters: {
 		controls: {
@@ -8,6 +10,7 @@ const preview = {
 			},
 		},
 	},
+	decorators: [(story: StoryFn) => withGlobalStyle(story)], // Apply withGlobalStyle first
 };
 
 export default preview;

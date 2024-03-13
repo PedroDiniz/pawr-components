@@ -1,0 +1,7 @@
+@use './viewportValues' as viewport;
+
+@function scaleValue($value) {
+	@return calc(
+		#{$value} * (clamp(viewport.$min-width, viewport.$base-width, viewport.$max-width) / viewport.$ideal-width)
+	);
+}

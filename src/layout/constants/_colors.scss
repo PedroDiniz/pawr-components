@@ -1,0 +1,22 @@
+@function pallete($color, $alpha: 1) {
+	$rgba: red($color), green($color), blue($color), $alpha;
+	@return rgba($rgba...);
+}
+
+$dark-gray: rgba(40, 42, 54, 1);
+$light-gray: rgba(68, 71, 90, 1);
+$white: rgba(248, 248, 242, 1);
+$blue-gray: rgba(98, 114, 164, 1);
+$cyan: rgba(139, 233, 253, 1);
+$green: rgba(80, 250, 123, 1);
+$orange: rgba(255, 184, 108, 1);
+$pink: rgba(255, 121, 198, 1);
+$purple: rgba(189, 147, 249, 1);
+$red: rgba(255, 85, 85, 1);
+$yellow: rgba(241, 250, 140, 1);
+
+// Example usage:
+// .element {
+//   background: pallete($dark-gray);
+//   color: pallete($light-gray, 0.8);
+// }

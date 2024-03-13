@@ -1,0 +1,56 @@
+@use '../../layout/constants/_breakpoints' as bp;
+@import '../../layout/constants/colors';
+@import '../../layout/constants/scaleValue';
+
+.viewer {
+	&__close {
+		position: fixed;
+		z-index: 2;
+		top: scaleValue(30);
+		right: scaleValue(30);
+		& > p {
+			font-size: scaleValue(30);
+			color: aliceblue;
+			cursor: pointer;
+		}
+	}
+
+	&__content {
+		padding: 0 scaleValue(30);
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, 0.9);
+		display: flex;
+		align-items: center;
+		transition: opacity ease 0.4s;
+		justify-content: space-between;
+		&__navButtonPrev {
+			background: none;
+			border: none;
+			color: aliceblue;
+			font-size: scaleValue(80);
+			width: scaleValue(70);
+			height: scaleValue(70);
+		}
+
+		&__navButtonNext {
+			background: none;
+			border: none;
+			color: aliceblue;
+			font-size: scaleValue(80);
+			width: scaleValue(70);
+			height: scaleValue(70);
+		}
+
+		& > img {
+			width: 80%;
+			height: 80%;
+
+			border-radius: scaleValue(8);
+			object-fit: contain;
+		}
+	}
+}

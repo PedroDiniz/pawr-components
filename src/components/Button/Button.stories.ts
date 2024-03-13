@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { fn } from '@storybook/test';
 import { Button } from './Button';
+import { primary, secondary, large, small } from './buttonData';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const buttonMeta: Meta<typeof Button> = {
@@ -25,29 +26,17 @@ type Story = StoryObj<typeof buttonMeta>;
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 export const Primary: Story = {
-	args: {
-		customStyle: 'primary',
-		label: 'Button',
-	},
+	args: primary,
 };
 
 export const Secondary: Story = {
-	args: {
-		label: 'Button',
-		customStyle: 'secondary',
-	},
+	args: secondary,
 };
 
 export const Large: Story = {
-	args: {
-		size: 'large',
-		label: 'Button',
-	},
+	args: large,
 };
 
 export const Small: Story = {
-	args: {
-		size: 'small',
-		label: 'Button',
-	},
+	args: small,
 };

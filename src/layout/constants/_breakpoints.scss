@@ -1,0 +1,23 @@
+$breakpoints: (
+	xxl: 9999em,
+	xl: 161em,
+	lg: 126em,
+	md: 91em,
+	sm: 65em,
+	xs: 40em,
+);
+
+@mixin media($breakpoint) {
+	$min-width: map-get($breakpoints, $breakpoint);
+	$prev-breakpoint: map-get($breakpoints, index($breakpoints, $breakpoint) - 1);
+
+	@if $prev-breakpoint {
+		@media (min-width: $min-width) {
+			@content;
+		}
+	} @else {
+		@media (max-width: $min-width) {
+			@content;
+		}
+	}
+}

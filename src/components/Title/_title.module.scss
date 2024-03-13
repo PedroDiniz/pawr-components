@@ -1,0 +1,20 @@
+@use '../../layout/constants/_breakpoints' as bp;
+@import '../../layout/constants/colors';
+@import '../../layout/constants/scaleValue';
+
+.title {
+	padding-bottom: scaleValue(40);
+	text-align: center;
+	font-weight: bold;
+	color: pallete($white);
+	font-size: scaleValue(30);
+	@include bp.media(md) {
+		font-size: scaleValue(40);
+	}
+	@include bp.media(sm) {
+		font-size: scaleValue(60);
+	}
+	@include bp.media(xs) {
+		font-size: scaleValue(80);
+	}
+}

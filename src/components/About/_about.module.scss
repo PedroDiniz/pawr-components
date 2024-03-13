@@ -1,0 +1,90 @@
+@use '../../layout/constants/_breakpoints' as bp;
+@import '../../layout/constants/colors';
+@import '../../layout/constants/scaleValue';
+
+.about {
+	width: 100%;
+	height: fit-content;
+	padding: scaleValue(58);
+	background-color: pallete($light-gray);
+	&__content {
+		display: flex;
+		flex-direction: row;
+		@include bp.media(sm) {
+			flex-direction: column;
+			gap: scaleValue(30);
+			align-items: center;
+		}
+		@include bp.media(xs) {
+			flex-direction: column;
+			gap: scaleValue(30);
+			align-items: center;
+		}
+
+		&__imageContainer {
+			display: flex;
+			align-items: center;
+			max-width: 50%;
+			max-height: scaleValue(600);
+			&__image {
+				width: 100%;
+				border-radius: scaleValue(8);
+			}
+		}
+		&__text {
+			color: pallete($white);
+			max-width: 50%;
+			align-items: baseline;
+			padding: 0 0 0 scaleValue(30);
+
+			@include bp.media(sm) {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: scaleValue(20);
+				max-width: 80%;
+			}
+			@include bp.media(xs) {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: scaleValue(20);
+				max-width: 80%;
+			}
+
+			& > h2 {
+				font-size: scaleValue(24);
+				@include bp.media(md) {
+					font-size: scaleValue(34);
+				}
+				@include bp.media(sm) {
+					font-size: scaleValue(44);
+				}
+				@include bp.media(xs) {
+					font-size: scaleValue(64);
+				}
+				margin-bottom: scaleValue(30);
+			}
+
+			& > p {
+				font-size: scaleValue(16);
+				text-align: justify;
+				@include bp.media(lg) {
+					font-size: scaleValue(20);
+				}
+				@include bp.media(md) {
+					font-size: scaleValue(24);
+				}
+				@include bp.media(sm) {
+					font-size: scaleValue(40);
+					line-height: normal;
+				}
+				@include bp.media(xs) {
+					font-size: scaleValue(52);
+					line-height: normal;
+				}
+				line-height: scaleValue(24);
+			}
+		}
+	}
+}

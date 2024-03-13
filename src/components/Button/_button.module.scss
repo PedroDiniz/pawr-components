@@ -1,35 +1,37 @@
+@use '../../layout/constants/_breakpoints' as bp;
+@import '../../layout/constants/colors';
+@import '../../layout/constants/scaleValue';
+
 .storybookButton {
-	font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	font-weight: 700;
 	border: 0;
-	border-radius: 3em;
+	border-radius: scaleValue(8);
 	cursor: pointer;
 	display: inline-block;
 	line-height: 1;
 
-	&[data-customStyle='primary'] {
+	&[data-customstyle='primary'] {
 		color: white;
 		background-color: #1ea7fd;
 	}
 
-	&[data-customStyle='secondary'] {
+	&[data-customstyle='secondary'] {
 		color: #333;
 		background-color: transparent;
 		box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
 	}
 
 	&[data-size='small'] {
-		font-size: 12px;
-		padding: 10px 16px;
+		font-size: scaleValue(12);
+		padding: scaleValue(20) scaleValue(16);
 	}
 
 	&[data-size='medium'] {
-		font-size: 14px;
-		padding: 11px 20px;
+		font-size: scaleValue(14);
+		padding: scaleValue(11) scaleValue(20);
 	}
 
 	&[data-size='large'] {
-		font-size: 16px;
-		padding: 12px 24px;
+		font-size: scaleValue(16);
+		padding: scaleValue(12) scaleValue(24);
 	}
 }

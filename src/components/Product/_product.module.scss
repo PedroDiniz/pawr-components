@@ -1,0 +1,55 @@
+@use '../../layout/constants/_breakpoints' as bp;
+@import '../../layout/constants/colors';
+@import '../../layout/constants/scaleValue';
+
+.product {
+	display: flex;
+	flex-direction: column;
+	background-color: pallete($dark-gray);
+	height: fit-content;
+	align-items: center;
+	justify-content: center;
+	padding: scaleValue(58);
+	&__container {
+		display: flex;
+		justify-content: center;
+		gap: scaleValue(20);
+		flex-wrap: wrap;
+		white-space: nowrap;
+
+		@include bp.media(xs) {
+			width: 100%;
+			flex-direction: column;
+			height: fit-content;
+			align-items: center;
+		}
+
+		&__imgContainer {
+			display: flex;
+			width: 15%;
+			flex-direction: column;
+			align-items: center;
+			font-size: scaleValue(16);
+			@include bp.media(md) {
+				font-size: scaleValue(26);
+			}
+			@include bp.media(sm) {
+				font-size: scaleValue(32);
+			}
+			@include bp.media(xs) {
+				font-size: scaleValue(52);
+			}
+			font-weight: bold;
+			gap: scaleValue(30);
+			color: pallete($white);
+			& > img {
+				cursor: pointer;
+				width: 100%;
+				border-radius: scaleValue(8);
+				@include bp.media(xs) {
+					min-width: scaleValue(600);
+				}
+			}
+		}
+	}
+}

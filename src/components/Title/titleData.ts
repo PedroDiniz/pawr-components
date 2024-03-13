@@ -1,4 +1,4 @@
-import TitleProps from './Title.interface';
+import TitleProps from './interface';
 const titleData: TitleProps = {
 	text: 'default',
 	ready: true,

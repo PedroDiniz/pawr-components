@@ -11,5 +11,4 @@ export default interface TitleProps {
 	 * Font color for the title
 	 */
 	color?: string;
-	onClick?: () => void;
 }

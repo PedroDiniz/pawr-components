@@ -12,7 +12,7 @@
 		"strict": true,
 		"baseUrl": "./",
 		"paths": {
-			"@/*": ["./src/*"]
+			"@/*": ["src/*"]
 		},
 		"forceConsistentCasingInFileNames": true,
 		"module": "esnext",
@@ -22,6 +22,6 @@
 		"noEmit": true,
 		"jsx": "react"
 	},
-	"include": ["src/**/*.ts", "src/**/*.tsx", "src/declarations/scss.d.ts"],
+	"include": ["src/**/*.ts", "src/**/*.tsx", ".storybook/*tsx", "src/declarations/scss.d.ts"],
 	"exclude": ["node_modules"]
 }

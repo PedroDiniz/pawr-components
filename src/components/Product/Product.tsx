@@ -1,10 +1,10 @@
-import React from 'react';
 import { nanoid } from 'nanoid';
-import classes from './_product.module.scss';
-import Title from '../Title/Title';
-import ProductProps from './Product.interface';
-import ImgViewer from '../ImgViewer/ImgViewer';
+import React from 'react';
 import useImageViewer from '../../hooks/useImgViewer';
+import ImgViewer from '../ImgViewer/ImgViewer';
+import Title from '../Title/Title';
+import ProductProps from './interface';
+import classes from './_product.module.scss';
 
 const Product = ({ mainTitle, cards }: ProductProps) => {
 	const { showFullScreen, viewerData, handleImageClick, handleCloseFullScreen } = useImageViewer();
@@ -33,7 +33,7 @@ const Product = ({ mainTitle, cards }: ProductProps) => {
 				images={cards.map((c) => c.icon)}
 				currentIndex={viewerData.currentIndex}
 				title={cards[viewerData.currentIndex]?.title}
-				data-status={showFullScreen}
+				status={showFullScreen}
 				onClose={handleCloseFullScreen}
 			/>
 		</div>

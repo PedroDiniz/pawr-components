@@ -1,5 +1,5 @@
 import React from 'react';
-import AboutProps from './About.interface';
+import AboutProps from './interface';
 import classes from './_about.module.scss';
 
 const About = ({ url, alt, mainTitle, description }: AboutProps) => (

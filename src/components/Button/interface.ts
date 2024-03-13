@@ -1,6 +1,6 @@
 import { ButtonHTMLAttributes } from 'react';
 
-export default interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 	/**
 	 * Is this the principal call to action on the page?
 	 */
@@ -22,3 +22,4 @@ export default interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElem
 	 */
 	onClick?: () => void;
 }
+export default ButtonProps;

@@ -1,11 +1,11 @@
 import React from 'react';
+import ButtonProps from './interface';
 import classes from './_button.module.scss';
-import ButtonProps from './Button.interface';
 
-export const Button = ({ customStyle = 'primary', size = 'medium', backgroundColor, label, ...props }: ButtonProps) => {
+const Button = ({ customStyle = 'primary', size = 'medium', backgroundColor, label, ...props }: ButtonProps) => {
 	return (
 		<button
-			data-customstyle={customStyle}
+			data-customStyle={customStyle}
 			data-size={size}
 			type="button"
 			className={classes.storybookButton}
@@ -16,3 +16,5 @@ export const Button = ({ customStyle = 'primary', size = 'medium', backgroundCol
 		</button>
 	);
 };
+
+export default Button;

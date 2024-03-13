@@ -1,7 +1,6 @@
-// ImgViewer.js
 import React, { useEffect, useState } from 'react';
+import ImgViewerProps from './interface';
 import classes from './_imgViewer.module.scss';
-import ImgViewerProps from './ImgViewer.interface';
 
 const ImgViewer = ({ images, currentIndex, title, status, onClose }: ImgViewerProps) => {
 	const [internalIndex, setInternalIndex] = useState(0);

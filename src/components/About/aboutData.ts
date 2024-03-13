@@ -1,4 +1,4 @@
-import AboutProps from './About.interface';
+import AboutProps from './interface';
 const about: AboutProps = {
 	mainTitle: 'About',
 	description:

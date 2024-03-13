@@ -1,4 +1,4 @@
-import ButtonProps from './Button.interface';
+import ButtonProps from './interface';
 
 export const primary: ButtonProps = {
 	customStyle: 'primary',
@@ -6,8 +6,8 @@ export const primary: ButtonProps = {
 };
 
 export const secondary: ButtonProps = {
-	label: 'Button',
 	customStyle: 'secondary',
+	label: 'Button',
 };
 export const large: ButtonProps = {
 	size: 'large',

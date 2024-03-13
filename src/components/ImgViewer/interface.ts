@@ -1,4 +1,4 @@
-export default interface ImgViewerProps {
+interface ImgViewerProps {
 	/**
 	 * Image array
 	 */
@@ -14,9 +14,11 @@ export default interface ImgViewerProps {
 	/**
 	 * Status
 	 */
-	status: boolean;
+	status?: boolean;
 	/**
 	 * Click handler
 	 */
 	onClose: () => void;
 }
+
+export default ImgViewerProps;

@@ -1,5 +1,5 @@
-import ProductProps from './Product.interface';
 import { img43 } from '../../../assets/img/imgData';
+import ProductProps from './interface';
 
 const productData: ProductProps = {
 	mainTitle: 'PRODUCT',

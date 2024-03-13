@@ -38,7 +38,7 @@ export default [
 		],
 	},
 	{
-		input: 'lib/index.d.ts',
+		input: 'lib/src/index.d.ts',
 		output: [{ file: 'lib/index.d.ts', format: 'es' }],
 		plugins: [dts()],
 		external: [/\.scss$/],

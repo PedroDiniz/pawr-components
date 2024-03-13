@@ -1,4 +1,4 @@
-export default interface AboutProps {
+interface AboutProps {
 	/**
 	 * The image URL to display
 	 */
@@ -16,3 +16,5 @@ export default interface AboutProps {
 	 */
 	description: string;
 }
+
+export default AboutProps;

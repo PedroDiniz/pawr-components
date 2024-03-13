@@ -1,6 +1,6 @@
 {
   "name": "pawr-components",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
@@ -25,22 +25,17 @@
     "@storybook/addon-onboarding": "^8.0.0",
     "@storybook/addon-webpack5-compiler-swc": "^1.0.2",
     "@storybook/blocks": "^8.0.0",
-    "@storybook/preset-scss": "^1.0.3",
     "@storybook/react": "^8.0.0",
     "@storybook/react-webpack5": "^8.0.0",
     "@storybook/test": "^8.0.0",
     "@types/node": "^20.11.26",
-    "@types/node-sass": "^4.11.7",
     "@types/react": "^18.2.65",
     "@types/react-dom": "^18.2.21",
     "@typescript-eslint/eslint-plugin": "^7.2.0",
     "@typescript-eslint/parser": "^7.2.0",
-    "css-loader": "^6.10.0",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-react": "^7.34.0",
-    "node-sass": "^9.0.0",
-    "postcss": "^8.4.35",
     "prettier": "^3.2.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -48,8 +43,6 @@
     "rollup-plugin-dts": "^6.1.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
-    "sass": "^1.71.1",
-    "sass-loader": "^14.1.1",
     "storybook": "^8.0.0",
     "storybook-addon-sass-postcss": "^0.2.0",
     "style-loader": "^3.3.4",
@@ -57,8 +50,7 @@
   },
   "peerDependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "sass": "^1.71.1"
+    "react-dom": "^18.2.0"
   },
   "files": [
     "/lib"

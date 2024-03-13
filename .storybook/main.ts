@@ -1,23 +1,29 @@
-import type { StorybookConfig } from "@storybook/react-webpack5";
+import type { StorybookConfig } from '@storybook/react-webpack5';
 
 const config: StorybookConfig = {
-  stories: ["../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
-  addons: [
-    "@storybook/addon-webpack5-compiler-swc",
-    "@storybook/addon-onboarding",
-    "@storybook/addon-links",
-    "@storybook/addon-essentials",
-    "@chromatic-com/storybook",
-    "@storybook/addon-interactions",
-    "@storybook/addon-styling",
-    "@storybook/addon-actions",
-  ],
-  framework: {
-    name: "@storybook/react-webpack5",
-    options: {},
-  },
-  docs: {
-    autodocs: true,
-  },
+	stories: ['../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
+	addons: [
+		'@storybook/addon-webpack5-compiler-swc',
+		'@storybook/addon-onboarding',
+		'@storybook/addon-links',
+		'@storybook/addon-essentials',
+		'@chromatic-com/storybook',
+		'@storybook/addon-interactions',
+		{
+			name: 'storybook-addon-sass-postcss',
+			options: {
+				rule: {
+					test: /\.(scss|sass)$/i,
+				},
+			},
+		},
+	],
+	framework: {
+		name: '@storybook/react-webpack5',
+		options: {},
+	},
+	docs: {
+		autodocs: 'tag',
+	},
 };
 export default config;

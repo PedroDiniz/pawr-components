@@ -1,4 +1,4 @@
-import { img43 } from '../../../assets/img/imgData';
+import { img43 } from '../../../assets/img/mediaData';
 import ProductProps from './interface';
 
 const productData: ProductProps = {

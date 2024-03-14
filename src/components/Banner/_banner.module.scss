@@ -1,0 +1,81 @@
+@use '../../layout/constants/_breakpoints' as bp;
+@use '../../layout/constants/_images' as img;
+@import '../../layout/constants/scaleValue';
+@import '../../layout/constants/colors';
+
+.paused {
+	user-select: none;
+	-webkit-user-select: none;
+	-webkit-touch-callout: none;
+	text-size-adjust: none;
+	-webkit-text-size-adjust: none;
+	touch-action: manipulation;
+}
+
+.slide {
+	display: grid;
+	border-radius: scaleValue(4);
+	overflow: hidden;
+	margin: scaleValue(20) auto;
+	width: scaleValue(800);
+	background: black;
+	&__elements {
+		display: grid;
+		grid-area: 1/1;
+
+		> video,
+		> img {
+			display: block;
+			max-width: 100%;
+		}
+	}
+
+	&__controls {
+		grid-area: 1/1;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		position: relative;
+
+		& > button {
+			opacity: 0;
+			appearance: none;
+			-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+		}
+	}
+}
+
+.bar {
+	display: flex;
+	position: absolute;
+	width: 100%;
+	pointer-events: none;
+	&__container {
+		flex: 1;
+		height: scaleValue(4);
+		display: block;
+		background: rgba(255, 255, 255, 0.2);
+		margin: scaleValue(5);
+		border-radius: scaleValue(4);
+		overflow: hidden;
+		isolation: isolate;
+		&__item {
+			&[data-active='true'] {
+				display: flex;
+				height: inherit;
+				background: rgba(255, 255, 255, 0.9);
+				border-radius: scaleValue(4);
+				transform: translateX(-100%);
+				animation: thumb forwards linear running;
+			}
+			&[data-paused='true'] {
+				animation-play-state: paused;
+			}
+		}
+	}
+}
+
+@keyframes thumb {
+	to {
+		transform: initial;
+	}
+}
